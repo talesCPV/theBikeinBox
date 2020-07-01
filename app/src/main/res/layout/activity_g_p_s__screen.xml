@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tela02">
+
+    <LinearLayout
+        android:id="@+id/lly3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lly2">
+
+        <TextView
+            android:id="@+id/lblHora"
+            android:layout_width="50dp"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:clickable="false"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/lblTempo"
+            android:layout_width="50dp"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="00:00:00"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly1"
+        android:layout_width="fill_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="2dp">
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="StartTrain"
+            android:text="START" />
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="SALVAR" />
+
+        <Button
+            android:id="@+id/btnResetar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="false"
+            android:text="RESET" />
+
+        <Button
+            android:id="@+id/btnFechar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="FECHAR" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lly1">
+
+        <TextView
+            android:id="@+id/lblLabelHora"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="Hora do dia" />
+
+        <TextView
+            android:id="@+id/lblLabelTempo"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="Tempo" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lly3">
+
+        <TextView
+            android:id="@+id/lblLabelVel"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="Velocidade Km/h" />
+
+        <TextView
+            android:id="@+id/lblLabelVelMed"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="Velocidade Media Km/h" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lly4">
+
+        <TextView
+            android:id="@+id/lblVel"
+            android:layout_width="50dp"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0.00"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/lblVelMed"
+            android:layout_width="50dp"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="0.00"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lly5">
+
+        <TextView
+            android:id="@+id/lblLabelAlt"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="Altimetria m" />
+
+        <TextView
+            android:id="@+id/lblLabelAcum"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="Alt. Acumulada m" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly7"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lly6">
+
+        <TextView
+            android:id="@+id/lblAlt"
+            android:layout_width="50dp"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/lblAcum"
+            android:layout_width="50dp"
+            android:layout_height="96dp"
+            android:layout_weight="1"
+            android:textSize="30sp"
+            android:gravity="center"
+            android:text="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly8"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lly7">
+
+        <TextView
+            android:id="@+id/lblLabelDist"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:text="Distância Km" />
+
+        <TextView
+            android:id="@+id/lblLabelTemp"
+            android:paddingLeft="10dp"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Temperatura" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lly9"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lly8">
+
+        <TextView
+            android:id="@+id/lblDist"
+            android:layout_width="50dp"
+            android:layout_height="96dp"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_weight="1"
+            android:text="0.00" />
+
+        <TextView
+            android:id="@+id/lblTemp"
+            android:layout_width="50dp"
+            android:layout_height="96dp"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_weight="1"
+            android:text="0" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lly9"
+        app:srcCompat="@drawable/logo_thebikeinbox" />
+</androidx.constraintlayout.widget.ConstraintLayout>
